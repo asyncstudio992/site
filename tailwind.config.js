@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-satoshi)'],
+      },
       colors: {
 
         // Brand Colors
@@ -25,6 +28,7 @@ module.exports = {
         'dark-gray': "#4E515C",
         white: "#ffffff",
         light: "#fafafa",
+        'light-gray': "#f8f8f8",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

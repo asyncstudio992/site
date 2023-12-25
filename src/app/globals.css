@@ -74,3 +74,16 @@
     @apply bg-white text-dark;
   }
 }
+
+.link-hover {
+  @apply before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[1px] before:transition-all before:duration-150 hover:before:w-full before:bg-dark
+}
+
+.slick-track {
+  height: auto;
+  padding: 20px 0;
+}
+.slick-list {
+  margin: 0 -15px;
+}
+.slick-slide>div {padding: 0 15px;}

@@ -1,11 +1,65 @@
 import type { Metadata } from 'next'
-import { Inter as MainFont } from 'next/font/google'
+import localFont from 'next/font/local'
+
 import './globals.css'
 
 import { cn } from "@/lib/utils"
-const mainFont = MainFont({ 
-  subsets: ["latin"],
-  variable: "--font-sans",
+import { Header } from '@/components/Header'
+
+const satoshi = localFont({
+  src: [
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-Light.otf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-LightItalic.otf',
+      weight: '300',
+      style: 'italic',
+    },
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-Italic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-Medium.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-MediumItalic.otf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-BoldItalic.otf',
+      weight: '700',
+      style: 'italic',
+    },
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-Black.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/assets/fonts/satoshi/Satoshi-BlackItalic.otf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+  variable: "--font-satoshi",
 })
 
 //add config for a body font if necessary
@@ -22,12 +76,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={
-        cn(
-          "min-h-screen bg-background font-sans antialiased",
-          mainFont.variable
-        )
-      }>{children}</body>
+      <body className={cn(
+        "min-h-screen antialiased font-sans",
+        satoshi.variable
+      )}>
+        <Header />
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
