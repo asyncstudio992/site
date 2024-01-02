@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { AlignRight } from 'lucide-react'
+import { AlignRight, ArrowRight } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -17,7 +17,7 @@ const navigationMap = [
   },
   {
     label: 'Sobre',
-    href: '/about',
+    href: '/sobre',
   },
   {
     label: 'Cases',
@@ -54,6 +54,12 @@ export const MobileNavbar = () => {
                 </Link>
               ))
             }
+            <Link href="/fale-conosco">
+              <Button>
+                Fale conosco
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
           </nav>
         </SheetContent>
       </Sheet>

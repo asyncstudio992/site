@@ -40,8 +40,8 @@ export const CarouselCases = ({ content }: CarouselProps) => {
           ))
         }
       </CarouselContent>
-      <CarouselPrevious className="w-12 h-12 bg-dark text-primary text-lg hover:text-secondary hover:bg-dark" />
-      <CarouselNext className="w-12 h-12 bg-dark text-primary text-lg hover:text-secondary hover:bg-dark" />
+      <CarouselPrevious className="-left-6 w-12 h-12 bg-dark text-primary text-lg hover:text-secondary hover:bg-dark" />
+      <CarouselNext className="-right-6 w-12 h-12 bg-dark text-primary text-lg hover:text-secondary hover:bg-dark" />
     </Carousel>
   )
 }

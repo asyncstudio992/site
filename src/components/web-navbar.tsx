@@ -12,7 +12,7 @@ const navigationMap = [
   },
   {
     label: 'Sobre',
-    href: '/about',
+    href: '/sobre',
   },
   {
     label: 'Cases',
@@ -40,7 +40,7 @@ export const WebNavbar = () => {
           </Link>
         ))
       }
-      <Link href="/">
+      <Link href="/fale-conosco">
         <Button>
           Fale conosco
           <ArrowRight className="w-4 h-4 ml-2" />

@@ -10,6 +10,9 @@ import Link from 'next/link'
 
 import { ServiceSingle } from './_components/service-single'
 import { WorkFlowItem } from '@/components/work-flow-item'
+import { Faq } from '@/components/faq'
+import { Banner } from '@/components/banner'
+import { Socials } from '@/components/socials'
 
 const workFlow = [
   {
@@ -110,7 +113,7 @@ export default function Home() {
     <>
       <section className="w-full py-20 px-5">
         <div className="container w-full h-full flex flex-col gap-10 md:gap-16">
-          <h1 className="text-center md:text-start text-7xl md:text-[90px] font-bold md:leading-[83px]">Estúdio de inovação em design e tecnologia</h1>
+          <h1 className="text-center md:text-start text-7xl md:text-[90px] font-bold md:leading-[83px]">Estúdio de inovação em design e desenvolvimento</h1>
           <div className="flex flex-col md:flex-row items-center justify-between gap-2">
             <div className="w-full max-w-md text-center md:text-start ">
               Nosso papel é transformar suas ideias e problemas em soluções digitais exclusivas, elegantes e sofisticadas. 
@@ -136,10 +139,13 @@ export default function Home() {
       <section className="py-20 px-5 bg-light-gray">
         <div className="container w-full h-full grid gap-8 ">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <SectionTitle
-              subtitle="Quem somos"
-              title="Um pouco sobre nós"
-            />
+            <div className="flex flex-col gap-5">
+              <SectionTitle
+                subtitle="Quem somos"
+                title="Um pouco sobre nós"
+              />
+              <Socials />
+            </div>
             <p className="w-full max-w-xl text-dark text-md leading-8">
               A Async é um estúdio de UI/UX e Desenvolvimento Web que busca agregar valor e transformar empresas por meio de soluções digitais exclusivas, elegantes e sofisticadas. Criamos layouts pensando na jornada do cliente, visando proporcionar a melhor experiência possível. Nosso objetivo é garantir que nosso trabalho seja excelente e impacte positivamente a vida de várias pessoas. 
             </p>
@@ -211,6 +217,12 @@ export default function Home() {
               content={content}
             />
           </div>
+        </div>
+      </section>
+      <Faq />
+      <section className="py-5 md:py-10 lg:py-20 px-5">
+        <div className="container w-full h-full grid gap-8 ">
+          <Banner />
         </div>
       </section>
     </>
