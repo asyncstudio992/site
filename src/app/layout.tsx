@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 
 import { cn } from "@/lib/utils"
+import { Toaster } from "@/components/ui/toaster"
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
@@ -85,6 +86,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <Toaster />
         <Footer />
       </body>
     </html>

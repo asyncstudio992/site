@@ -19,7 +19,7 @@ export default function ContactUs() {
             </p>
             <Socials />
           </div>
-          <div className="mt-16 w-full flex flex-col md:flex-row gap-10 md:gap-20">
+          <div className="mt-16 w-full flex flex-col md:flex-row gap-10 md:gap-16">
             <ContactForm />
             <div className="w-full max-w-md flex flex-col gap-10">
               <div>

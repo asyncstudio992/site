@@ -192,7 +192,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-20 px-5 bg-light-gray">
+      <section className="md:pt-20 pb-10 px-5 bg-light-gray">
         <div className="container w-full h-full grid gap-8 ">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <SectionTitle
@@ -220,7 +220,7 @@ export default function Home() {
         </div>
       </section>
       <Faq />
-      <section className="py-5 md:py-10 lg:py-20 px-5">
+      <section className="pb-5 pt-5 md:pb-20 md:pt-10 px-5">
         <div className="container w-full h-full grid gap-8 ">
           <Banner />
         </div>

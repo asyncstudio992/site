@@ -1,14 +1,14 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
- 
+import axios from 'axios'
+
 import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -19,21 +19,25 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Input } from "@/components/ui/input"
 import { Checkbox } from '@/components/ui/checkbox'
 import { Textarea } from '@/components/ui/textarea'
+import { useToast } from "@/components/ui/use-toast"
 import { cn } from '@/lib/utils'
+import { LoaderIcon } from 'lucide-react'
 
 const formSchema = z.object({
-  name: z.string().min(3, { message: "O nome precisa de no mínimo 3 caracteres",}),
+  name: z.string().min(3, { message: "Esse campo é obrigatório",}),
   company: z.string().min(1, { message: "Esse campo é obrigatório",}),
-  email: z.string().email(),
+  email: z.string().email({ message: "Esse campo é obrigatório" }),
   whatsapp: z.string(),
   web_development: z.boolean().default(false),
   ui_design: z.boolean().default(false),
   time_available: z.string(),
   budget: z.string(),
-  description: z.string(),
+  description: z.string().min(1, { message: "Esse campo é obrigatório",}),
 })
 
 export const  ContactForm = () => {
+  const [isSending, setIsSending] = useState(false)
+  const { toast } = useToast()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -49,11 +53,26 @@ export const  ContactForm = () => {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      setIsSending(true)
+      const data = await axios.post('/api/contact', values)
+      console.log(data)
+      toast({
+        description: "Sua mensagem foi enviada, entraremos en contato assim que possível.",
+      })
+      form.reset()
+    } catch (error) {
+      console.log(error)
+      toast({
+        variant: 'destructive',
+        description: "Ocorreu um erro ao enviar sua mensagem, tente novamente!",
+      })
+    } finally {
+      setIsSending(false)
+    }
   } 
 
-  console.log(form.watch())
   return (
     <div className="py-8 px-5 w-full bg-light-gray shadow rounded-lg">
       <h3 className="text-2xl font-bold mb-3">Lorem ipsum dolor sit amet consectetur.</h3>
@@ -195,7 +214,7 @@ export const  ContactForm = () => {
             <div className="mt-5 w-full">
               <FormField
                 control={form.control}
-                name="time_available"
+                name="budget"
                 render={({ field }) => (
                   <FormItem className="space-y-3">
                     <FormLabel>Qual valor do seu investimento?</FormLabel>
@@ -210,7 +229,7 @@ export const  ContactForm = () => {
                           <Label 
                             htmlFor="less_than_1000" 
                             className={cn(
-                              "rounded-full text-xs px-5 py-3 border border-input text-dark cursor-pointer",
+                              "rounded-full text-xs px-5 py-3 border border-gray-300 text-dark cursor-pointer",
                               field.value === 'less_than_1000' && 'border-dark'
                             )}>
                               Menor que R$1000
@@ -221,7 +240,7 @@ export const  ContactForm = () => {
                           <Label 
                             htmlFor="1k_5k" 
                             className={cn(
-                              "rounded-full text-xs px-5 py-3 border border-input text-dark cursor-pointer",
+                              "rounded-full text-xs px-5 py-3 border border-gray-300 text-dark cursor-pointer",
                               field.value === '1k_5k' && 'border-dark'
                             )}>
                               R$1000 - R$5 mil
@@ -232,7 +251,7 @@ export const  ContactForm = () => {
                           <Label 
                             htmlFor="5k_10k" 
                             className={cn(
-                              "rounded-full text-xs px-5 py-3 border border-input text-dark cursor-pointer",
+                              "rounded-full text-xs px-5 py-3 border border-gray-300 text-dark cursor-pointer",
                               field.value === '5k_10k' && 'border-dark'
                             )}>
                               R$5 mil - R$10 mil
@@ -243,7 +262,7 @@ export const  ContactForm = () => {
                           <Label 
                             htmlFor="greater_than_10k" 
                             className={cn(
-                              "rounded-full text-xs px-5 py-3 border border-input text-dark cursor-pointer",
+                              "rounded-full text-xs px-5 py-3 border border-gray-300 text-dark cursor-pointer",
                               field.value === 'greater_than_10k' && 'border-dark'
                             )}>
                               Acima de R$10 mil
@@ -258,7 +277,7 @@ export const  ContactForm = () => {
           </div>
           <FormField
             control={form.control}
-            name="whatsapp"
+            name="description"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Descreva seu projeto contando todos os  detalhes</FormLabel>
@@ -269,7 +288,21 @@ export const  ContactForm = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="text-sm">Enviar mensagem</Button>
+          <Button 
+            type="submit" 
+            className="text-sm"
+            disabled={isSending}
+          >
+            {
+              isSending 
+              ? (
+                <div className="animate-spin">
+                  <LoaderIcon />
+                </div>
+              ) 
+              : 'Enviar mensagem'
+            }
+          </Button>
         </form>
       </Form>
     </div>
