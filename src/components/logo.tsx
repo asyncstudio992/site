@@ -1,14 +1,12 @@
 import React from 'react'
 import BrandLogo from '../../public/assets/images/logo.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const Logo = () => {
   return (
-    <Image
-      src={BrandLogo}
-      alt="Logo da Async"
-      width={112}
-      height={50}
-    />
+    <Link href="/" className="text-4xl font-bold text-dark dark:text-white">
+      Async
+    </Link>
   )
 }

@@ -14,16 +14,16 @@ interface WorkFlowItemProps {
 
 export const WorkFlowItem = ({ workFlowNumber, title, description, icon: Icon, tags }: WorkFlowItemProps) => {
   return (
-    <Card className="w-full pxasy-2 lg:px-5 pb-5 pt-10 relative bg-light-gray">
+    <Card className="w-full px-2 py-2 lg:px-5 pb-5 pt-10 relative bg-light-gray dark:bg-dark">
       <CardHeader>
-        <div className="absolute -top-10 right-14 w-20 h-20 flex items-center justify-center text-2xl font-bold text-primary bg-dark rounded-full">{workFlowNumber}</div>
+        <div className="absolute -top-10 right-14 w-20 h-20 flex items-center justify-center text-2xl font-bold dark:border text-primary dark:text-primary bg-dark  rounded-full">{workFlowNumber}</div>
         <CardTitle className="flex items-center gap-2 font-semibold text-xl">
           <Icon className="text-secondary w-8 h-8" />
           {title}
         </CardTitle>
         <CardDescription className="text-sm text-dark"></CardDescription>
       </CardHeader>
-      <CardContent className="text-sm text-dark">
+      <CardContent className="text-sm text-dark dark:text-gray-400">
         <p>{description}</p>
       </CardContent>
       <CardFooter className="flex items-center gap-1 flex-wrap">
@@ -32,7 +32,7 @@ export const WorkFlowItem = ({ workFlowNumber, title, description, icon: Icon, t
             <Badge 
               key={tag}
               variant="outline" 
-              className="font-medium py-1 border-slate-300"   
+              className="font-medium py-1 border-slate-300 dark:border-gray-400 dark:text-gray-400"   
             >
               {tag}
             </Badge>

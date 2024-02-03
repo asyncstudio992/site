@@ -111,15 +111,15 @@ const content = [
 export default function Home() {
   return (
     <>
-      <section className="w-full py-20 px-5">
+      <section className="w-full py-20 mt-20 px-5">
         <div className="container w-full h-full flex flex-col gap-10 md:gap-16">
-          <h1 className="text-center md:text-start text-7xl md:text-[90px] font-bold md:leading-[83px]">Estúdio de inovação em design e desenvolvimento</h1>
+          <h1 className="text-dark dark:text-white text-center md:text-start text-7xl md:text-[90px] font-bold md:leading-[83px]">Estúdio de inovação em design e desenvolvimento</h1>
           <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-            <div className="w-full max-w-md text-center md:text-start ">
+            <div className="w-full max-w-md text-center text-dark dark:text-gray-400 md:text-start ">
               Nosso papel é transformar suas ideias e problemas em soluções digitais exclusivas, elegantes e sofisticadas. 
             </div>
-            <Separator className="hidden md:block md:max-w-xs lg:max-w-sm" />
-            <div className="flex items-center gap-3 md:gap-8">
+            <Separator className="hidden md:block md:max-w-xs lg:max-w-sm dark:bg-gray-400" />
+            <div className="flex items-center gap-3 md:gap-8 text-dark dark:text-gray-400">
               <p className="uppercase font-thin text-md">Design • Código • Projetos</p>
               <div className="flex items-center gap-4">
                 <IconBadge icon={Figma} />
@@ -128,15 +128,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="p-10 bg-dark rounded-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 text-center">
+          <div className="p-10 border bg-dark  rounded-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 text-center">
             <ServiceSingle label="Desenvolvimento Web" />
             <ServiceSingle label="Desenvolvimento Mobile" />
             <ServiceSingle label="UX/UI Design" />
-            <ServiceSingle label="Data Analytics" />
+            <ServiceSingle label="Automação" />
           </div>
         </div>
       </section>
-      <section className="py-20 px-5 bg-light-gray">
+      <section id="sobre" className="py-20 px-5 bg-light-gray dark:bg-dark">
         <div className="container w-full h-full grid gap-8 ">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-col gap-5">
@@ -146,36 +146,36 @@ export default function Home() {
               />
               <Socials />
             </div>
-            <p className="w-full max-w-xl text-dark text-md leading-8">
+            <p className="w-full max-w-xl text-dark dark:text-gray-400 text-md leading-8">
               A Async é um estúdio de UI/UX e Desenvolvimento Web que busca agregar valor e transformar empresas por meio de soluções digitais exclusivas, elegantes e sofisticadas. Criamos layouts pensando na jornada do cliente, visando proporcionar a melhor experiência possível. Nosso objetivo é garantir que nosso trabalho seja excelente e impacte positivamente a vida de várias pessoas. 
             </p>
           </div>
           <Separator />
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <p className="w-full max-w-4xl text-md text-dark">
+            <p className="w-full max-w-4xl text-md  text-dark dark:text-gray-400">
               Somo um estúdio especializado em design e desenvolvimento composto por pessoas repletas de criatividade e sede de conhecimento dispostas a transformar sua ideia em realidade.
             </p>
-            <Link href="/about">
+            {/* <Link href="/about">
               <Button>
                 Conheça a Async
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
-      <section className="py-20 px-5">
+      <section id="nosso-servico" className="py-20 px-5">
         <div className="container w-full h-full grid gap-8 ">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <SectionTitle
               subtitle="Como trabalhamos"
               title="Nosso fluxo de trabalho"
             />
-            <p className="w-full max-w-xl text-dark text-md leading-8">
+            <p className="w-full max-w-xl text-dark dark:text-gray-400 text-md leading-8">
               Nossa missão é garantir que nossos clientes tenham a melhor e mais impactante experiência durante toda a sua jornada com a gente. Por isso, nossa estratégia é voltada a garantir que o cliente participe em todas as etapas do processo garantindo que seja entregue um melhor resultado.
             </p>
           </div>
-          <Separator />
+          <Separator className="dark:bg-gray-400" />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-20">
             {
               workFlow.map(item => (
@@ -192,7 +192,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="md:pt-20 pb-10 px-5 bg-light-gray">
+      <section id="cases" className="py-20 px-5 bg-light-gray dark:bg-dark">
         <div className="container w-full h-full grid gap-8 ">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <SectionTitle
@@ -200,18 +200,18 @@ export default function Home() {
               title="Alguns de nossos cases"
             />
             <div className="flex flex-col gap-5">
-              <p className="w-full max-w-xl text-dark text-md leading-8">
+              <p className="w-full max-w-xl text-dark dark:text-gray-400 text-md leading-8">
                 Projetados por designers e desenvolvedores capacitados e engajados, para entregar nada menos do que um trabalho excelente e de qualidade para nossos clientes
               </p>
-              <Link href="/portfolio" className="self-end">
+              {/* <Link href="/portfolio" className="self-end">
                 <Button>
                   Mais cases
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
-          <Separator />
+          <Separator className="dark:bg-gray-400"/>
           <div className="w-full max-w-[1140px] mx-auto">
             <CarouselCases 
               content={content}
@@ -220,7 +220,7 @@ export default function Home() {
         </div>
       </section>
       <Faq />
-      <section className="pb-5 pt-5 md:pb-20 md:pt-10 px-5">
+      <section className="py-5 md:py-10 lg:py-20 px-5">
         <div className="container w-full h-full grid gap-8 ">
           <Banner />
         </div>

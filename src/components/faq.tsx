@@ -24,26 +24,26 @@ export const Faq = () => {
 
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
-            <AccordionTrigger className="px-5 py-8 hover:no-underline hover:bg-light-gray">Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac.</AccordionTrigger>
-            <AccordionContent className="p-5 text-[16px]">
+            <AccordionTrigger className="px-5 py-8 hover:no-underline dark:text-white hover:bg-light-gray dark:hover:bg-secondary-cn/20">Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac.</AccordionTrigger>
+            <AccordionContent className="p-5 text-[16px] dark:text-gray-400">
               Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac. Aliquet aenean purus quam nisi diam diam vitae nisl sagittis. elit fringilla convallis consequat proin ac. Aliquet aenean purus quam nisi diam diam vitae nisl sagittis.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="px-5 py-8 hover:no-underline hover:bg-light-gray">Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac.</AccordionTrigger>
-            <AccordionContent className="p-5 text-[16px]">
+            <AccordionTrigger className="px-5 py-8 hover:no-underline dark:text-white hover:bg-light-gray dark:hover:bg-secondary-cn/20">Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac.</AccordionTrigger>
+            <AccordionContent className="p-5 text-[16px] dark:text-gray-400">
               Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac. Aliquet aenean purus quam nisi diam diam vitae nisl sagittis. elit fringilla convallis consequat proin ac. Aliquet aenean purus quam nisi diam diam vitae nisl sagittis.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="px-5 py-8 hover:no-underline hover:bg-light-gray">Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac.</AccordionTrigger>
-            <AccordionContent className="p-5 text-[16px]">
+            <AccordionTrigger className="px-5 py-8 hover:no-underline dark:text-white hover:bg-light-gray dark:hover:bg-secondary-cn/20">Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac.</AccordionTrigger>
+            <AccordionContent className="p-5 text-[16px] dark:text-gray-400">
               Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac. Aliquet aenean purus quam nisi diam diam vitae nisl sagittis. elit fringilla convallis consequat proin ac. Aliquet aenean purus quam nisi diam diam vitae nisl sagittis.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
-            <AccordionTrigger className="px-5 py-8 hover:no-underline hover:bg-light-gray">Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac.</AccordionTrigger>
-            <AccordionContent className="p-5 text-[16px]">
+            <AccordionTrigger className="px-5 py-8 hover:no-underline dark:text-white hover:bg-light-gray dark:hover:bg-secondary-cn/20">Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac.</AccordionTrigger>
+            <AccordionContent className="p-5 text-[16px] dark:text-gray-400">
               Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac. Aliquet aenean purus quam nisi diam diam vitae nisl sagittis. elit fringilla convallis consequat proin ac. Aliquet aenean purus quam nisi diam diam vitae nisl sagittis.
             </AccordionContent>
           </AccordionItem>

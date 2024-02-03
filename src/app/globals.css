@@ -75,6 +75,10 @@
   }
 }
 
+html, body, :root {
+  scroll-behavior: smooth;
+}
+
 .link-hover {
   @apply before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[1px] before:transition-all before:duration-150 hover:before:w-full before:bg-dark
 }

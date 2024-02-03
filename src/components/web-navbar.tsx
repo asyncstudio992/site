@@ -4,6 +4,7 @@ import React from 'react'
 import { ArrowRight } from 'lucide-react'
 
 import { Button } from './ui/button'
+import { ToggleThemeMode } from './toggle-theme-button'
 
 const navigationMap = [
   {
@@ -12,15 +13,15 @@ const navigationMap = [
   },
   {
     label: 'Sobre',
-    href: '/sobre',
+    href: '/#sobre',
+  },
+  {
+    label: 'Nosso serviço',
+    href: '/#nosso-servico',
   },
   {
     label: 'Cases',
-    href: '/cases',
-  },
-  {
-    label: 'Expertise',
-    href: '/expertise',
+    href: '/#cases',
   },
 ]
 
@@ -32,7 +33,7 @@ export const WebNavbar = () => {
           <Link 
             key={link.label}
             href={link.href}
-            className="relative w-fit h-auto text-md font-medium text-dark transition link-hover"
+            className="relative w-fit h-auto text-md font-medium text-dark dark:text-white transition link-hover"
           >
             {
               link.label
@@ -46,6 +47,7 @@ export const WebNavbar = () => {
           <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
       </Link>
+      <ToggleThemeMode />
     </nav>
   )
 }

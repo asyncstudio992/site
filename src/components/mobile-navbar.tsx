@@ -17,15 +17,15 @@ const navigationMap = [
   },
   {
     label: 'Sobre',
-    href: '/sobre',
+    href: '/#sobre',
+  },
+  {
+    label: 'Nosso serviço',
+    href: '/#nosso-servico',
   },
   {
     label: 'Cases',
-    href: '/cases',
-  },
-  {
-    label: 'Expertise',
-    href: '/expertise',
+    href: '/#cases',
   },
 ]
 
