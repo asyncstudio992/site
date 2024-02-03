@@ -113,7 +113,7 @@ export default function Home() {
     <>
       <section className="w-full py-20 mt-20 px-5">
         <div className="container w-full h-full flex flex-col gap-10 md:gap-16">
-          <h1 className="text-dark dark:text-white text-center md:text-start text-7xl md:text-[90px] font-bold md:leading-[83px]">Estúdio de inovação em design e desenvolvimento</h1>
+          <h1 className="text-dark dark:text-white text-center md:text-start text-6xl  md:text-[90px] font-bold md:leading-[83px]">Estúdio de inovação em design e desenvolvimento</h1>
           <div className="flex flex-col md:flex-row items-center justify-between gap-2">
             <div className="w-full max-w-md text-center text-dark dark:text-gray-400 md:text-start ">
               Nosso papel é transformar suas ideias e problemas em soluções digitais exclusivas, elegantes e sofisticadas. 

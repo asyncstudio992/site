@@ -4,6 +4,7 @@ import { Logo } from './logo'
 import { WebNavbar } from './web-navbar'
 import { MobileNavbar } from './mobile-navbar'
 import { cn } from '@/lib/utils'
+import { ToggleThemeMode } from './toggle-theme-button'
 
 export const Header = () => {
   const [fixedNav, setFixedNav] = useState(false)
