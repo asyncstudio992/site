@@ -206,7 +206,7 @@ export default function Home() {
             </div> */}
           </div>
           {/* <Separator className="dark:bg-gray-400"/> */}
-          <div className="">
+          <div className="w-full max-w-[1440px] mx-auto">
             <CarouselCases 
               content={content}
             />

@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ContactUs() {
   return (
     <>
-     <section className="w-full py-20 px-5">
+     <section className="w-full py-20">
         <div className="relative container w-full h-full">
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-1">

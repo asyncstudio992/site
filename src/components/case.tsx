@@ -13,7 +13,7 @@ interface CaseProps {
 
 export const Case = ({ case: { description, image, tags, title } }: CaseProps) => {
   return (
-    <div className="w-full bg-white dark:bg-dark dark:border max-w-[576px] p-5 rounded-lg">
+    <div className="w-full bg-white dark:bg-dark dark:border  p-5 rounded-lg">
       <div className="w-full h-[344px] rounded-lg relative">
         <Image
           src={image}
