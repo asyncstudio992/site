@@ -22,16 +22,16 @@ export const CarouselCases = ({ content }: CarouselProps) => {
   return (
     <Carousel
       opts={{
-        align: 'start'
+        align: 'start',
       }}
-      className="w-full p-3"
+      className="py-10"
     >
-      <CarouselContent className="-ml-4">
+      <CarouselContent>
         {
           content.map(item => (
             <CarouselItem
               key={item.title}
-              className="basis-full md:basis-1/2 pl-4"
+              className="sm:basis-1/2"
             >
               <Case 
                 case={item}
@@ -40,8 +40,8 @@ export const CarouselCases = ({ content }: CarouselProps) => {
           ))
         }
       </CarouselContent>
-      <CarouselPrevious className="-left-6 w-12 h-12 bg-dark text-primary text-lg hover:text-secondary hover:bg-dark" />
-      <CarouselNext className="-right-6 w-12 h-12 bg-dark text-primary text-lg hover:text-secondary hover:bg-dark" />
+      <CarouselPrevious className="hidden md:flex -left-4 lg:-left-6 w-12 h-12 bg-dark text-primary text-lg hover:text-secondary hover:bg-dark" />
+      <CarouselNext className="hidden md:flex -right-4 lg:-right-6 w-12 h-12 bg-dark text-primary text-lg hover:text-secondary hover:bg-dark" />
     </Carousel>
   )
 }

@@ -12,7 +12,7 @@ import {
 
 export const Faq = () => {
   return (
-    <section className="py-20 px-5">
+    <section className="py-20">
     <div className="container w-full h-full grid gap-8 ">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <SectionTitle
@@ -21,7 +21,6 @@ export const Faq = () => {
         />
       </div>
       <div className="py-10">
-
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger className="px-5 py-8 hover:no-underline dark:text-white hover:bg-light-gray dark:hover:bg-secondary-cn/20">Lorem ipsum dolor sit amet consectetur. Interdum viverra pharetra ut elit fringilla convallis consequat proin ac.</AccordionTrigger>
