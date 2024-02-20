@@ -4,7 +4,7 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-white dark:bg-dark border-t border-t-gray-200 dark:border-t-gray-800 relative">
+    <footer className="w-full bg-gray-50 dark:bg-dark border-t border-t-gray-200 dark:border-t-gray-800 relative">
       <div className="container w-full py-10 px-5 flex flex-col gap-10 md:flex-row justify-between">
         <div className="flex flex-col gap-5">
           <p className="text-3xl font-bold text-dark dark:text-white">Async Studio</p>

@@ -9,6 +9,27 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 
+const neueMachina = localFont({
+  src: [
+    {
+      path: '../../public/assets/fonts/neue-machina/NeueMachina-Light.otf',
+      weight: '300',
+      style: 'light',
+    },
+    {
+      path: '../../public/assets/fonts/neue-machina/NeueMachina-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/assets/fonts/neue-machina/NeueMachina-UltraBold.otf',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
+  variable: "--font-neue-machina",
+})
+
 const satoshi = localFont({
   src: [
     {
@@ -81,7 +102,8 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={cn(
         "min-h-screen antialiased font-sans",
-        satoshi.variable
+        satoshi.variable,
+        neueMachina.variable
       )}>
         <ThemeProvider
           attribute="class"

@@ -7,7 +7,7 @@ interface SectionTitleProps {
 
 export const SectionTitle = ({ subtitle, title }: SectionTitleProps) => {
   return (
-    <div className="w-fit md:w-full sm:max-w-xl flex flex-col gap-4">
+    <div className="font-main w-fit md:w-full sm:max-w-xl flex flex-col gap-4">
       <div className="w-fit flex flex-col">
         <div className="flex items-center text-sm uppercase font-light text-dark dark:text-white">
           <ChevronRight className="w-4 h-4" />

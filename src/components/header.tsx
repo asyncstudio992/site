@@ -28,7 +28,7 @@ export const Header = () => {
   return (
     <header className={cn(
       "z-50 fixed top-0 left-0 w-full px-5 h-20 flex items-center bg-white dark:bg-dark transition-all duration-300",
-      fixedNav && 'shadow-md'
+      fixedNav && 'shadow-sm shadow-gray-200 dark:shadow-gray-900'
     )}>
       <div className="container w-full h-full flex gap-5 items-center justify-between">
         <Logo />
