@@ -18,7 +18,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-satoshi)'],
-        main: ['var(--font-neue-machina)'],
+        main: ['var(--font-poppins)'],
       },
       colors: {
 

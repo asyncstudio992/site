@@ -1,5 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next'
+import { Poppins } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 
@@ -9,25 +10,10 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 
-const neueMachina = localFont({
-  src: [
-    {
-      path: '../../public/assets/fonts/neue-machina/NeueMachina-Light.otf',
-      weight: '300',
-      style: 'light',
-    },
-    {
-      path: '../../public/assets/fonts/neue-machina/NeueMachina-Regular.otf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/assets/fonts/neue-machina/NeueMachina-UltraBold.otf',
-      weight: '800',
-      style: 'normal',
-    },
-  ],
-  variable: "--font-neue-machina",
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: "--font-satoshi",
 })
 
 const satoshi = localFont({
@@ -103,7 +89,7 @@ export default function RootLayout({
       <body className={cn(
         "min-h-screen antialiased font-sans",
         satoshi.variable,
-        neueMachina.variable
+        poppins.variable
       )}>
         <ThemeProvider
           attribute="class"

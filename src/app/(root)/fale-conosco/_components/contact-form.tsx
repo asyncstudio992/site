@@ -190,19 +190,19 @@ export const  ContactForm = () => {
                         defaultValue={field.value}
                       >
                         <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="time_is_not_a_problem" id="time_is_not_a_problem"/>
+                          <RadioGroupItem value="time_is_not_a_problem" id="time_is_not_a_problem" className="text-secondary dark:text-primary"/>
                           <Label htmlFor="time_is_not_a_problem" className="text-md font-normal text-dark dark:text-gray-400">Tempo não é problema</Label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="one_two_months" id="one_two_months"/>
+                          <RadioGroupItem value="one_two_months" id="one_two_months" className="text-secondary dark:text-primary" />
                           <Label htmlFor="one_two_months" className="text-md font-normal text-dark dark:text-gray-400">1 a 2 meses</Label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="three_four_months" id="three_four_months"/>
+                          <RadioGroupItem value="three_four_months" id="three_four_months" className="text-secondary dark:text-primary" />
                           <Label htmlFor="three_four_months" className="text-md font-normal text-dark dark:text-gray-400">3 a 4 meses</Label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="urgency" id="urgency" />
+                          <RadioGroupItem value="urgency" id="urgency" className="text-secondary dark:text-primary" />
                           <Label htmlFor="urgency" className="text-md font-normal text-dark dark:text-gray-400">Preciso com urgência</Label>
                         </div>
                       </RadioGroup>
@@ -230,7 +230,7 @@ export const  ContactForm = () => {
                             htmlFor="less_than_1000" 
                             className={cn(
                               "rounded-full text-xs px-5 py-3 border border-gray-300 cursor-pointer text-dark dark:text-gray-400",
-                              field.value === 'less_than_1000' && 'border-dark dark:border-primary dark:text-primary'
+                              field.value === 'less_than_1000' && 'border-secondary text-secondary dark:border-primary dark:text-primary'
                             )}>
                               Menor que R$1000
                           </Label>
@@ -241,7 +241,7 @@ export const  ContactForm = () => {
                             htmlFor="1k_5k" 
                             className={cn(
                               "rounded-full text-xs px-5 py-3 border border-gray-300 cursor-pointer text-dark dark:text-gray-400",
-                              field.value === '1k_5k' && 'border-dark dark:border-primary dark:text-primary'
+                              field.value === '1k_5k' && 'border-secondary text-secondary dark:border-primary dark:text-primary'
                             )}>
                               R$1000 - R$5 mil
                           </Label>
@@ -252,7 +252,7 @@ export const  ContactForm = () => {
                             htmlFor="5k_10k" 
                             className={cn(
                               "rounded-full text-xs px-5 py-3 border border-gray-300 cursor-pointer text-dark dark:text-gray-400",
-                              field.value === '5k_10k' && 'border-dark dark:border-primary dark:text-primary'
+                              field.value === '5k_10k' && 'border-secondary text-secondary dark:border-primary dark:text-primary'
                             )}>
                               R$5 mil - R$10 mil
                           </Label>
@@ -263,7 +263,7 @@ export const  ContactForm = () => {
                             htmlFor="greater_than_10k" 
                             className={cn(
                               "rounded-full text-xs px-5 py-3 border border-gray-300 cursor-pointer text-dark dark:text-gray-400",
-                              field.value === 'greater_than_10k' && 'border-dark dark:border-primary dark:text-primary'
+                              field.value === 'greater_than_10k' && 'border-secondary text-secondary dark:border-primary dark:text-primary'
                             )}>
                               Acima de R$10 mil
                           </Label>
